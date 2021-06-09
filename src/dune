@@ -1,0 +1,11 @@
+(executable
+  (name calculator)
+  (public_name calculator)
+  (preprocess (pps ppx_deriving.show))
+  (flags (:standard -warn-error -A)))
+
+(ocamllex
+  (modules lexer))
+
+(cram
+ (deps %{bin:calculator}))
